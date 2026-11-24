@@ -1,0 +1,138 @@
+/* =========================================================
+   MUNDO PET | Identidade visual moderna - verde + laranja
+   ========================================================= */
+:root {
+    --verde-900: #104b32;
+    --verde-800: #17613d;
+    --verde-700: #217849;
+    --verde-100: #e9f5e8;
+    --laranja: #f28a00;
+    --laranja-escuro: #df7600;
+    --creme: #fffaf2;
+    --texto: #24352b;
+    --muted: #66756b;
+    --branco: #fff;
+    --sombra: 0 12px 32px rgba(24, 66, 43, .10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+body {
+    margin: 0; background: var(--creme); color: var(--texto);
+    font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.6;
+}
+header { position: relative; z-index: 1000; }
+.navbar {
+    background: linear-gradient(100deg, #104b32, #17613d) !important;
+    min-height: 72px; padding: 10px 0; box-shadow: 0 5px 18px rgba(10,45,28,.16);
+}
+.navbar .container { max-width: 1320px; }
+.navbar-brand { color: #fff !important; font-size: 1.75rem; font-weight: 850; letter-spacing: -.6px; }
+.navbar-brand::first-letter { color: #ffad25; }
+.nav-link { color: rgba(255,255,255,.92) !important; font-weight: 700; padding: 10px 14px !important; border-radius: 10px; transition: .2s ease; }
+.nav-link:hover, .nav-link:focus { color: #fff !important; background: rgba(242,138,0,.22); }
+.navbar-toggler { border-color: rgba(255,255,255,.45); }
+.navbar-toggler-icon { filter: invert(1); }
+
+/* Hero: banner largo, sem faixas vazias ou imagem estreita */
+.hero-mundo-pet { width: 100%; background: #e9e3d6; }
+#carrosselMundoPet { width: 100%; overflow: hidden; }
+#carrosselMundoPet .carousel-item { height: clamp(350px, 39vw, 540px); position: relative; background: #d8dfd4; }
+#carrosselMundoPet .carousel-item img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 42%; }
+#carrosselMundoPet .carousel-item:nth-child(2) img { object-position: center 43%; }
+#carrosselMundoPet .carousel-item:nth-child(3) img { object-position: center 38%; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,250,242,.96) 0%, rgba(255,250,242,.88) 30%, rgba(255,250,242,.25) 58%, rgba(10,35,20,.05) 100%); }
+.hero-content { position: absolute; z-index: 2; top: 50%; left: max(7%, calc((100% - 1260px)/2)); transform: translateY(-50%); width: min(510px, 48%); }
+.hero-kicker { display: inline-block; color: var(--verde-800); background: #e5f3d6; border-radius: 50px; padding: 7px 15px; font-weight: 800; margin-bottom: 15px; }
+.hero-content h1 { color: var(--verde-900); font-size: clamp(2.35rem, 4.5vw, 4.3rem); line-height: 1.04; letter-spacing: -1.8px; font-weight: 900; margin: 0 0 15px; }
+.hero-content h1 span { color: var(--laranja); }
+.hero-content p { font-size: clamp(1rem, 1.5vw, 1.25rem); max-width: 440px; color: #34463a; margin-bottom: 23px; }
+.btn-hero { background: var(--laranja); border: 2px solid var(--laranja); color: #fff; border-radius: 30px; padding: 12px 24px; font-weight: 850; box-shadow: 0 7px 16px rgba(242,138,0,.22); }
+.btn-hero:hover, .btn-hero:focus { background: var(--laranja-escuro); border-color: var(--laranja-escuro); color: #fff; transform: translateY(-2px); }
+#carrosselMundoPet .carousel-control-prev, #carrosselMundoPet .carousel-control-next { width: 7%; z-index: 5; }
+#carrosselMundoPet .carousel-control-prev-icon, #carrosselMundoPet .carousel-control-next-icon { background-color: rgba(16,75,50,.78); background-size: 48%; border-radius: 50%; width: 48px; height: 48px; }
+#carrosselMundoPet .carousel-indicators { z-index: 6; margin-bottom: 18px; }
+#carrosselMundoPet .carousel-indicators [data-bs-target] { width: 10px; height: 10px; border: 0; border-radius: 50%; margin: 0 5px; }
+
+main { padding-bottom: 35px; }
+section:not(.hero-mundo-pet) { scroll-margin-top: 90px; }
+#produtos, #servicos, #cadastro { max-width: 1320px; }
+#produtos, #servicos { padding-top: 58px !important; padding-bottom: 24px !important; }
+h1, h2, h3, h4, legend { color: var(--verde-900); }
+#produtos > h2, #servicos > h2, #cadastro > h2 {
+    text-align: center; font-size: clamp(1.8rem, 3vw, 2.55rem); font-weight: 900;
+    letter-spacing: -.7px; margin-bottom: 28px; display: flex; align-items: center; gap: 18px;
+}
+#produtos > h2::before, #produtos > h2::after, #servicos > h2::before, #servicos > h2::after {
+    content: ""; height: 2px; flex: 1; background: #a9c6a4;
+}
+#produtos > h2::first-letter, #servicos > h2::first-letter { color: var(--laranja); }
+#produtos h3.mt-4, #produtos h3.mt-5 {
+    display: inline-flex; align-items: center; background: #e3f4c9; color: var(--verde-900);
+    padding: 7px 20px; border-radius: 30px; font-size: 1.08rem; font-weight: 850; margin-bottom: 17px !important;
+}
+#produtos .row { margin-bottom: 20px; }
+.card {
+    height: 100%; overflow: hidden; border: 1px solid rgba(29,78,49,.10); border-radius: 19px;
+    background: var(--branco); box-shadow: 0 5px 18px rgba(24,66,43,.09); transition: transform .22s ease, box-shadow .22s ease;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(24,66,43,.15); }
+#produtos .card-img-top { display: block; width: 100%; height: 205px; object-fit: contain; padding: 8px; background: #fff; }
+#produtos .card-body { padding: 14px 17px 17px; }
+.card-title { color: var(--verde-900); font-size: 1.12rem; font-weight: 850; margin-bottom: 6px; }
+.card-text { color: #526057; margin-bottom: 10px; }
+#produtos .fw-bold, #servicos .fw-bold { color: var(--verde-800); font-size: 1.08rem; margin-bottom: 0; }
+
+/* Serviços com imagem e texto lado a lado */
+#servicos .row { --bs-gutter-x: 1.5rem; }
+#servicos article .card { display: grid; grid-template-columns: 54% 46%; align-items: stretch; }
+#servicos .card-img-top { width: 100%; height: 100%; min-height: 260px; object-fit: cover; border-radius: 18px 0 0 18px; }
+#servicos .card-body { padding: 22px 20px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
+#servicos .card-title { font-size: 1.55rem; }
+#servicos .fw-bold { background: #e7f5d2; padding: 7px 12px; border-radius: 10px; margin: 6px 0 13px; font-size: .98rem; }
+.btn-primary { background: var(--verde-800); border-color: var(--verde-800); color: #fff; border-radius: 28px; padding: 10px 20px; font-weight: 800; }
+.btn-primary:hover, .btn-primary:focus { background: var(--laranja); border-color: var(--laranja); color: #fff; }
+.btn-outline-primary { color: var(--verde-800); border-color: var(--verde-800); border-radius: 28px; font-weight: 750; }
+.btn-outline-primary:hover { background: var(--verde-800); border-color: var(--verde-800); color: #fff; }
+
+/* Formulário */
+#cadastro { margin-top: 35px; margin-bottom: 25px; padding: 38px !important; border: 1px solid #e6eadf; border-radius: 24px; background: #fff; box-shadow: var(--sombra); }
+#cadastro > p { text-align: center; color: var(--muted); margin-top: -14px; margin-bottom: 28px; }
+legend { font-size: 1.18rem; font-weight: 850; border-bottom: 2px solid #e6f1df; padding-bottom: 9px; }
+.form-label { color: #344b3b; font-weight: 750; }
+.form-control, .form-select { min-height: 46px; border: 1px solid #d6e0d5; border-radius: 11px; }
+.form-control:focus, .form-select:focus { border-color: var(--verde-700); box-shadow: 0 0 0 .2rem rgba(33,120,73,.13); }
+.form-check-input:checked { background-color: var(--verde-800); border-color: var(--verde-800); }
+#mensagemFormulario { margin-top: 12px; }
+footer { margin-top: 55px; padding: 42px 16px 30px; background: linear-gradient(110deg, #104b32, #17613d); color: #fff; text-align: center; }
+footer h2, footer h3 { color: #fff; font-weight: 850; }
+footer p { margin-bottom: 7px; color: rgba(255,255,255,.88); }
+footer p:last-child { margin-top: 18px; font-size: .9rem; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
+@media (max-width: 991.98px) {
+    .hero-content { left: 7%; width: 54%; }
+    #servicos article .card { grid-template-columns: 1fr; }
+    #servicos .card-img-top { height: 230px; min-height: 230px; border-radius: 18px 18px 0 0; }
+}
+@media (max-width: 767.98px) {
+    .navbar-brand { font-size: 1.45rem; }
+    #carrosselMundoPet .carousel-item { height: 430px; }
+    #carrosselMundoPet .carousel-item img { object-position: 62% center; }
+    .hero-overlay { background: linear-gradient(90deg, rgba(255,250,242,.94), rgba(255,250,242,.75) 68%, rgba(255,250,242,.18)); }
+    .hero-content { left: 7%; width: 78%; }
+    .hero-content h1 { font-size: 2.55rem; }
+    #produtos, #servicos { padding-top: 38px !important; }
+    #produtos > h2, #servicos > h2 { gap: 10px; font-size: 1.7rem; }
+    #produtos .card-img-top { height: 190px; }
+    #cadastro { padding: 23px !important; }
+}
+@media (max-width: 480px) {
+    #carrosselMundoPet .carousel-item { height: 390px; }
+    .hero-content { width: 82%; }
+    .hero-content h1 { font-size: 2.15rem; }
+    .hero-content p { font-size: 1rem; }
+    #produtos > h2, #servicos > h2 { font-size: 1.45rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
